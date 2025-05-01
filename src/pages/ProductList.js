@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import useCartStore from '../store/cartStore'
-import useThemeStore from '../store/themeStore'
+// Remove this unused import
+// import useThemeStore from '../store/themeStore'
 
 const ProductList = () => {
   const [products, setProducts] = useState([])
@@ -12,7 +13,8 @@ const ProductList = () => {
   const [sortBy, setSortBy] = useState('default')
   const [categories, setCategories] = useState([])
   const addItem = useCartStore((state) => state.addItem)
-  const darkMode = useThemeStore((state) => state.darkMode)
+  // Remove the unused darkMode variable
+  // const darkMode = useThemeStore((state) => state.darkMode)
 
   useEffect(() => {
     Promise.all([
